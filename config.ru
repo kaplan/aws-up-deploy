@@ -2,12 +2,8 @@ require 'bundler'
 Bundler.require
 
 $LOAD_PATH.unshift 'lib'
-
-require 'yaml'
-
-# this is optional
-# require 'rack/cache'
 use Rack::Cache
 
-require './blog'
+require 'yaml'
+require 'blog'
 run Blog

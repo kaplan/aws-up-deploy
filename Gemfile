@@ -1,19 +1,14 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'sinatra', require: 'sinatra/base'
-gem 'sinatra-contrib', require: 'sinatra/reloader', require: 'sinatra/config_file'
-gem 'sinatra-assetpack', require: 'sinatra/assetpack'
-gem 'rack-cache', require: 'rack/cache'
-gem 'coffee-script'
-gem 'compass'
-gem 'execjs'
-gem 'sass'
+gem "sinatra", require: "sinatra/base"
+gem "rack-cache", require: "rack/cache"
+
+gem "markdown", "~> 1.1.1"
 
 group :development do
   gem "thin", "~> 1.5.1"
-  # gem 'thin'
 end
 
 group :production do
-  gem 'unicorn'
+  gem "unicorn"
 end

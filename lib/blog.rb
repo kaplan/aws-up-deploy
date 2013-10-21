@@ -1,11 +1,10 @@
-require 'sinatra/base'
-require 'ostruct'
-require 'time'
-
+# require 'sinatra/base'
 # require 'github_hook'
+# require 'ostruct'
+# require 'time'
 
 class Blog < Sinatra::Base
-  # use GithubHook
+  # # use GithubHook
 
   # File.expand_path generates an absolute path.
   # It also takes a path as a second argument.
@@ -14,6 +13,7 @@ class Blog < Sinatra::Base
   set :articles, []
   set :app_file, __FILE__
 
+  # get('/') { markdown "# A Blog!" }
 
   # loop through all the article files
   Dir.glob "#{root}/articles/*.md" do |file|
@@ -49,6 +49,3 @@ class Blog < Sinatra::Base
     erb :index
   end
 end
-
-  # start the server if ruby file executed directly
-  # run! if app_file == $0
