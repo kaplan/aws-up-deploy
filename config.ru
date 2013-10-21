@@ -1,4 +1,5 @@
-$LOAD_PATH.unshift 'lib'
+# $LOAD_PATH.unshift 'lib'
+require File.expand_path '../lib/blog.rb', __FILE__
 
 require 'yaml'
 
@@ -6,5 +7,5 @@ require 'yaml'
 require 'rack/cache'
 use Rack::Cache
 
-require 'blog'
+# require 'blog'
 run Blog
