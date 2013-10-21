@@ -47,8 +47,8 @@ class Blog < Sinatra::Base
     erb :index
   end
 
-  get '/github' do
+  post '/github' do
     content_type :txt
-    `git pull`
+    `git pull 2>&1`
   end
 end
