@@ -13,9 +13,6 @@ class Blog < Sinatra::Base
   set :articles, []
   set :app_file, __FILE__
 
-
-  # get('/') { markdown "# A Blog!" }
-
   # loop through all the article files
   Dir.glob "#{root}/articles/*.md" do |file|
     # parse meta data and content from file
