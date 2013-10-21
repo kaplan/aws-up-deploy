@@ -29,8 +29,8 @@ class GithubHook < Sinatra::Base
     content_type :txt
     if settings.autopull?
       # Pipe stderr to stdout to make sure we display everything.
-      # `git pull 2>&1`
-      `git pull`
+      `git pull 2>&1`
+      # `git pull`
     else
       "ok"
     end
