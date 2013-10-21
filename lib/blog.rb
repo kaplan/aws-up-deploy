@@ -1,10 +1,10 @@
 # require 'sinatra/base'
-# require 'github_hook'
-# require 'ostruct'
-# require 'time'
+require 'github_hook'
+require 'ostruct'
+require 'time'
 
 class Blog < Sinatra::Base
-  # # use GithubHook
+  use GithubHook
 
   # File.expand_path generates an absolute path.
   # It also takes a path as a second argument.
