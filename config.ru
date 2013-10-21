@@ -1,11 +1,13 @@
+require 'bundler'
+Bundler.require
+
 $LOAD_PATH.unshift 'lib'
-# require File.expand_path '../lib/blog.rb', __FILE__
 
 require 'yaml'
 
 # this is optional
-require 'rack/cache'
+# require 'rack/cache'
 use Rack::Cache
 
-# require 'blog'
+require './blog'
 run Blog
