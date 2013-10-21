@@ -12,6 +12,7 @@ class Blog < Sinatra::Base
   set :root, File.expand_path('../../', __FILE__)
   set :articles, []
   set :app_file, __FILE__
+  set :environment, :production
 
   # get('/') { markdown "# A Blog!" }
 
