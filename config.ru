@@ -1,5 +1,5 @@
-# $LOAD_PATH.unshift 'lib'
-require File.expand_path '../lib/blog.rb', __FILE__
+$LOAD_PATH.unshift 'lib'
+# require File.expand_path '../lib/blog.rb', __FILE__
 
 require 'yaml'
 
