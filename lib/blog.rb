@@ -6,6 +6,8 @@ require 'time'
 class Blog < Sinatra::Base
   use GithubHook
 
+  register Sinatra::Reloader
+
   # File.expand_path generates an absolute path.
   # It also takes a path as a second argument.
   # The generated path is treated as being relative to that path.
